@@ -1,0 +1,1 @@
+# An adhoc collection of ideas
