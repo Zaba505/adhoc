@@ -11,9 +11,12 @@ import (
 // 3) Check users' guess
 // 4) Tell user: too high, too low, or correct
 
-func main() {
-	random := rand.New(rand.NewSource(time.Now().UnixNano()))
-	number := random.Intn(100)
+func randInt(r *rand.Rand, low, high int) int {
+	return r.Intn(high-low) + low
+}
+
+func runGame(r *rand.Rand, low, high int) {
+	number := randInt(r, low, high)
 
 	var guess int
 	for {
@@ -24,7 +27,6 @@ func main() {
 			fmt.Println("You're correct!")
 			break
 		}
-
 		if guess > number {
 			fmt.Println("Too high")
 		}
@@ -32,4 +34,9 @@ func main() {
 			fmt.Println("Too low")
 		}
 	}
+}
+
+func main() {
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
+	runGame(r, 0, 100)
 }
