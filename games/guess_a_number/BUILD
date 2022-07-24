@@ -1,5 +1,5 @@
 load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library", "go_test")
-load("@rules_python//python:defs.bzl", "py_binary")
+load("@rules_python//python:defs.bzl", "py_binary", "py_library")
 
 py_binary(
     name = "python",
@@ -24,4 +24,11 @@ go_test(
     name = "guess_a_number_test",
     srcs = ["main_test.go"],
     embed = [":guess_a_number_lib"],
+)
+
+py_library(
+    name = "guess_a_number",
+    srcs = ["guess_a_number.py"],
+    imports = ["../.."],
+    visibility = ["//:__subpackages__"],
 )
