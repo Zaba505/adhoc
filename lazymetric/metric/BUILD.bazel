@@ -1,0 +1,17 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "metric",
+    srcs = ["metric.go"],
+    importpath = "github.com/Zaba505/adhoc/lazymetric/metric",
+    visibility = ["//visibility:public"],
+    deps = ["@org_gonum_v1_gonum//mat"],
+)
+
+go_test(
+    name = "metric_test",
+    srcs = ["metric_test.go"],
+    data = glob(["testdata/**"]),
+    embed = [":metric"],
+    deps = ["@com_github_stretchr_testify//assert"],
+)

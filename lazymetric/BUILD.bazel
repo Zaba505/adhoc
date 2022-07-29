@@ -1,0 +1,15 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_library(
+    name = "lazymetric_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/Zaba505/adhoc/lazymetric",
+    visibility = ["//visibility:private"],
+    deps = ["//lazymetric/cmd"],
+)
+
+go_binary(
+    name = "lazymetric",
+    embed = [":lazymetric_lib"],
+    visibility = ["//visibility:public"],
+)

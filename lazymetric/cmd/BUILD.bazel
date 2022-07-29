@@ -1,0 +1,16 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "cmd",
+    srcs = [
+        "cmd.go",
+        "root.go",
+    ],
+    importpath = "github.com/Zaba505/adhoc/lazymetric/cmd",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//lazymetric/metric",
+        "@com_github_spf13_cobra//:cobra",
+        "@org_uber_go_zap//:zap",
+    ],
+)

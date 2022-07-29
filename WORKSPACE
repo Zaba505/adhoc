@@ -21,7 +21,6 @@ http_archive(
     ],
 )
 
-
 load("@io_bazel_rules_go//go:deps.bzl", "go_register_toolchains", "go_rules_dependencies")
 load("@bazel_gazelle//:deps.bzl", "gazelle_dependencies", "go_repository")
 
@@ -30,6 +29,18 @@ load("@bazel_gazelle//:deps.bzl", "gazelle_dependencies", "go_repository")
 # Else, dependencies declared by rules_go/gazelle will be used.
 # The first declaration of an external repository "wins".
 ############################################################
+
+go_repository(
+    name = "org_golang_x_xerrors",
+    importpath = "golang.org/x/xerrors",
+    sum = "h1:go1bK/D/BFZV2I8cIQd1NKEZ+0owSTG1fDTci4IqFcE=",
+    version = "v0.0.0-20200804184101-5ec99f83aff1",
+)
+
+load("//:go_dependencies.bzl", "go_dependencies")
+
+# gazelle:repository_macro go_dependencies.bzl%go_dependencies
+go_dependencies()
 
 go_rules_dependencies()
 
@@ -40,30 +51,29 @@ gazelle_dependencies()
 # gazelle:repository go_repository name=org_golang_x_xerrors importpath=golang.org/x/xerrors
 
 # Python
-rules_python_version = "0.10.2" # Latest @ 2021-06-23
+rules_python_version = "0.10.2"  # Latest @ 2021-06-23
 
 http_archive(
-  name = "rules_python",
-  sha256 = "e963db3a1893d3ef61869f2f9d438e09aa1f671ec20be9ebae29ad5c31b4a50c",
-  strip_prefix = "rules_python-{}".format(rules_python_version),
-  url = "https://github.com/bazelbuild/rules_python/archive/{}.zip".format(rules_python_version),
+    name = "rules_python",
+    sha256 = "e963db3a1893d3ef61869f2f9d438e09aa1f671ec20be9ebae29ad5c31b4a50c",
+    strip_prefix = "rules_python-{}".format(rules_python_version),
+    url = "https://github.com/bazelbuild/rules_python/archive/{}.zip".format(rules_python_version),
 )
 
 load("@rules_python//python:repositories.bzl", "python_register_toolchains")
 
 python_register_toolchains(
-  name = "python3_9",
-  # Available versions are listed in @rules_python//python:versions.bzl.
-  # We recommend using the same version your team is already standardized on.
-  python_version = "3.9",
+    name = "python3_9",
+    # Available versions are listed in @rules_python//python:versions.bzl.
+    # We recommend using the same version your team is already standardized on.
+    python_version = "3.9",
 )
 
 load("@python3_9//:defs.bzl", "interpreter")
-
 load("@rules_python//python:pip.bzl", "pip_parse")
 
 pip_parse(
-  name = "py_deps",
-  requirements_lock = "//:pip_lock.txt",
-  python_interpreter_target = interpreter,
+    name = "py_deps",
+    python_interpreter_target = interpreter,
+    requirements_lock = "//:pip_lock.txt",
 )
