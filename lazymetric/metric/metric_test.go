@@ -6,8 +6,8 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func toStream(xs []float64) <-chan float64 {
-	xsChan := make(chan float64)
+func toStream[T any](xs []T) <-chan T {
+	xsChan := make(chan T)
 	go func() {
 		defer close(xsChan)
 		for _, x := range xs {
@@ -23,12 +23,14 @@ func TestCompute(t *testing.T) {
 	// Compute distance matrix based on stream of data
 	m := Compute(stream, Euclidean)
 
-	// Assert expected dimensions
+	// Assert expected dimensions should be n x n
 	rows, cols := m.Dims()
 	if !assert.Equal(t, 3, rows) {
+		t.Logf("rows: %d", rows)
 		return
 	}
-	if !assert.Equal(t, 3, cols) {
+	if !assert.Equal(t, rows, cols) {
+		t.Logf("rows: %d, cols: %d", rows, rows)
 		return
 	}
 
@@ -41,6 +43,7 @@ func TestCompute(t *testing.T) {
 	for i, row := range expected {
 		for j, d := range row {
 			if !assert.Equal(t, d, m.At(i, j)) {
+				t.Logf("i: %d, j: %d", i, j)
 				return
 			}
 		}
@@ -51,8 +54,29 @@ func TestCompute(t *testing.T) {
 	for i, row := range expected {
 		for j, d := range row {
 			if !assert.Equal(t, d, mT.At(i, j)) {
+				t.Logf("i: %d, j: %d", i, j)
 				return
 			}
+		}
+	}
+}
+
+func BenchmarkCompute(b *testing.B) {
+	n := 10
+	for i := 0; i < b.N; i++ {
+		stream := make(chan float64, n)
+		go func() {
+			defer close(stream)
+			for j := 0; j < n; j++ {
+				stream <- float64(j)
+			}
+		}()
+		m := Compute(stream, Euclidean)
+
+		r, c := m.Dims()
+		if r != c {
+			b.Fail()
+			return
 		}
 	}
 }

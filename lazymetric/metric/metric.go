@@ -34,10 +34,13 @@ type DistanceMatrix struct {
 // Compute
 func Compute(stream <-chan float64, d Metric) *DistanceMatrix {
 	m := new(DistanceMatrix)
+	i := 0
 	for x := range stream {
+		i += 1
 		m.vals = append(m.vals, x)
-		for _, y := range m.vals {
-			m.dists = append(m.dists, d.Dist(x, y))
+		m.dists = append(m.dists, make([]float64, i)...)
+		for j, y := range m.vals {
+			m.dists[nth(i-1, j)] = d.Dist(x, y)
 		}
 	}
 	return m
