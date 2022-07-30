@@ -2,11 +2,9 @@ package cmd
 
 import (
 	"bufio"
-	"bytes"
 	"io"
 	"strconv"
 	"strings"
-	"text/tabwriter"
 
 	"github.com/Zaba505/adhoc/lazymetric/metric"
 	"go.uber.org/zap"
@@ -73,36 +71,22 @@ func getPointStream(r io.Reader, args []string) <-chan float64 {
 }
 
 func displayMatrix(w io.Writer, m *metric.DistanceMatrix) error {
-	var buf bytes.Buffer
-	tbw := tabwriter.NewWriter(w, 0, 8, 0, '\t', 0)
+	bw := bufio.NewWriter(w)
 
 	// distance matricies are nxn symmetric
 	n, _ := m.Dims()
 
-	// Write column headers
-	for j := 0; j < n; j++ {
-		buf.WriteRune('\t')
-		buf.WriteString(strconv.Itoa(j))
-	}
-	buf.WriteRune('\n')
-	buf.WriteTo(tbw)
-	buf.Reset()
-
 	// Write out rows
 	for i := 0; i < n; i++ {
-		buf.WriteString(strconv.Itoa(i))
-		buf.WriteRune('\t')
 		for j := 0; j < n; j++ {
 			x := m.At(i, j)
-			buf.WriteString(strconv.FormatFloat(x, 'f', 4, 64))
+			bw.WriteString(strconv.FormatFloat(x, 'f', 4, 64))
 			if j != n-1 {
-				buf.WriteRune('\t')
+				bw.WriteRune(',')
 			}
 		}
-		buf.WriteRune('\n')
-		buf.WriteTo(tbw)
-		buf.Reset()
+		bw.WriteRune('\n')
 	}
 
-	return tbw.Flush()
+	return bw.Flush()
 }
