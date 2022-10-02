@@ -1,0 +1,195 @@
+<mxfile host="65bd71144e">
+    <diagram id="fOCl24pGFUaWuH7LroDw" name="Page-1">
+        <mxGraphModel dx="1589" dy="949" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="19" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="320" y="530" width="200" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 12px&quot;&gt;Knative Broker&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="19" vertex="1">
+                    <mxGeometry x="40" y="30" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://knative.dev/docs/images/logo/rgb/knative-logo-rgb.png;" parent="19" vertex="1">
+                    <mxGeometry width="63.14" height="51" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="320" y="370" width="200" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 12px&quot;&gt;Event Record&lt;br&gt;Service&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="20" vertex="1">
+                    <mxGeometry x="40" y="30" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://knative.dev/docs/images/logo/rgb/knative-logo-rgb.png;" parent="20" vertex="1">
+                    <mxGeometry width="63.14" height="51" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="320" y="50" width="200" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="&lt;font face=&quot;Courier New&quot;&gt;PingSource&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="21" vertex="1">
+                    <mxGeometry x="40" y="30" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://knative.dev/docs/images/logo/rgb/knative-logo-rgb.png;" parent="21" vertex="1">
+                    <mxGeometry width="63.14" height="51" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="320" y="210" width="200" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="&lt;font face=&quot;Courier New&quot;&gt;Timestamp Service&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="22" vertex="1">
+                    <mxGeometry x="40" y="30" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://knative.dev/docs/images/logo/rgb/knative-logo-rgb.png;" parent="22" vertex="1">
+                    <mxGeometry width="63.14" height="51" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="565" y="530" width="200" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;font face=&quot;Courier New&quot;&gt;Timestamp Processor&lt;br&gt;Service&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="23" vertex="1">
+                    <mxGeometry x="40" y="30" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://knative.dev/docs/images/logo/rgb/knative-logo-rgb.png;" parent="23" vertex="1">
+                    <mxGeometry width="63.14" height="51" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="85" y="530" width="200" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="&lt;font face=&quot;Courier New&quot;&gt;Data Processor&lt;br&gt;Service&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="31" vertex="1">
+                    <mxGeometry x="40" y="30" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://knative.dev/docs/images/logo/rgb/knative-logo-rgb.png;" parent="31" vertex="1">
+                    <mxGeometry width="63.14" height="51" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="120" y="290" width="99.76999999999998" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon;prIcon=pod;fontFamily=Courier New;fontSize=18;" parent="46" vertex="1">
+                    <mxGeometry width="50" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="" style="sketch=0;aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/mscae/Cache_Redis_Product.svg;fontFamily=Courier New;" parent="46" vertex="1">
+                    <mxGeometry x="40.24000000000001" y="30" width="59.53" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="101" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Courier New;fontSize=18;" parent="1" source="10" target="2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="129" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;fontFamily=Courier New;" parent="101" vertex="1" connectable="0">
+                    <mxGeometry x="-0.4042" y="-3" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="121" value="12b" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;fontFamily=Courier New;fontSize=18;" parent="1" source="32" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="310" y="620"/>
+                            <mxPoint x="310" y="620"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="122" value="10" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;fontFamily=Courier New;fontSize=18;" parent="1" source="4" target="32" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="340" y="580"/>
+                            <mxPoint x="340" y="580"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="125" value="11" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=1;entryDx=0;entryDy=0;fontFamily=Courier New;fontSize=18;" parent="1" source="32" target="17" edge="1">
+                    <mxGeometry x="-0.4545" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="240" y="480"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="130" value="2" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Courier New;fontSize=18;" parent="1" source="2" target="17" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="138" value="3" style="edgeStyle=orthogonalEdgeStyle;html=1;fontFamily=Courier New;fontSize=18;" parent="1" source="18" target="42" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="139" value="4" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fontFamily=Courier New;fontSize=18;" parent="1" source="17" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="480" y="500"/>
+                            <mxPoint x="480" y="500"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="140" value="5" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;fontFamily=Courier New;fontSize=18;" parent="1" source="4" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="540" y="580"/>
+                            <mxPoint x="540" y="580"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="141" value="6" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;fontFamily=Courier New;fontSize=18;" parent="1" source="6" target="17" edge="1">
+                    <mxGeometry x="-0.2727" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="640" y="460"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="142" value="7a" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;fontFamily=Courier New;fontSize=18;" parent="1" source="6" target="17" edge="1">
+                    <mxGeometry x="-0.4706" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="720" y="420"/>
+                        </Array>
+                        <mxPoint y="-1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="143" value="7b" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;fontFamily=Courier New;fontSize=18;" parent="1" source="6" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="580" y="620"/>
+                            <mxPoint x="580" y="620"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="144" value="9" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;fontFamily=Courier New;fontSize=18;" parent="1" source="17" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="400" y="510"/>
+                            <mxPoint x="400" y="510"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="145" value="8" style="edgeStyle=orthogonalEdgeStyle;html=1;fontFamily=Courier New;fontSize=18;" parent="1" source="17" target="42" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="190" y="420"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="146" value="12a" style="edgeStyle=orthogonalEdgeStyle;html=1;fontFamily=Courier New;fontSize=18;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="32" target="17" edge="1">
+                    <mxGeometry x="-0.5333" relative="1" as="geometry">
+                        <mxPoint x="190" y="470" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="160" y="460"/>
+                        </Array>
+                        <mxPoint y="1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="147" value="13" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=-0.024;entryY=0.883;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Courier New;fontSize=18;" parent="1" source="17" target="42" edge="1">
+                    <mxGeometry x="0.5246" relative="1" as="geometry">
+                        <mxPoint y="1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="148" value="14" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Courier New;fontSize=18;" parent="1" source="17" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="149" value="&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 12px&quot;&gt;Backend&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="125" y="720" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="150" value="&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 12px&quot;&gt;Backend&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="605" y="720" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="151" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Courier New;fontSize=12;" edge="1" parent="1" source="32" target="149">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="152" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Courier New;fontSize=12;" edge="1" parent="1" source="6" target="150">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
