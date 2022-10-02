@@ -1,0 +1,91 @@
+syntax = "proto3";
+
+package proto;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/struct.proto";
+
+
+message NewEventRecord {
+  string trace_id = 1;
+  string event_type = 3;
+  google.protobuf.Timestamp timestamp = 4;
+  google.protobuf.Struct data = 5;
+}
+
+message EventRecord {
+  string trace_id = 1;
+  string record_id = 2;
+  string event_type = 3;
+  google.protobuf.Timestamp timestamp = 4;
+  google.protobuf.Struct data = 5;
+}
+
+message EventNotification {
+  string trace_id = 1;
+  string record_id = 2;
+  string event_type = 3;
+}
+
+service EventRecorder {
+  // RecordEvent
+  rpc RecordEvent (RecordEventRequest) returns (RecordEventResponse);
+
+  // GetRecord
+  rpc GetRecord (GetRecordRequest) returns (GetRecordResponse);
+
+  // SliceRecords
+  rpc SliceRecords (SliceRecordsRequest) returns (stream EventRecord);
+}
+
+message RecordEventRequest {
+  NewEventRecord record = 1;
+}
+
+message RecordEventSuccess {
+  string record_id = 1;
+}
+
+message RecordEventFailure {}
+
+message RecordEventResponse {
+  oneof status {
+    RecordEventSuccess success = 1;
+    RecordEventFailure failure = 2;
+  }
+}
+
+message GetRecordRequest {
+  string record_id = 1;
+}
+
+message GetRecordResponse {
+  EventRecord record = 1;
+}
+
+message AllWithTraceId {
+  string trace_id = 1;
+}
+
+message AllWithTraceIdAndAfterTimestamp {
+  string trace_id = 1;
+  google.protobuf.Timestamp timestamp = 2;
+}
+
+message Filter {
+  oneof value {
+    AllWithTraceId all_with_trace_id = 1;
+    AllWithTraceIdAndAfterTimestamp all_with_trace_id_and_after_timestamp = 2;
+  }
+}
+
+enum Order {
+  None = 0;
+  TimestampDesc = 1;
+  TimestampAsc = 2;
+}
+
+message SliceRecordsRequest {
+  repeated Filter filters = 1;
+  Order order = 2;
+}
