@@ -1,0 +1,19 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "topological",
+    srcs = ["sort.go"],
+    importpath = "github.com/Zaba505/adhoc/graphs/topological",
+    visibility = ["//visibility:public"],
+    deps = ["//graphs/model"],
+)
+
+go_test(
+    name = "topological_test",
+    srcs = ["sort_test.go"],
+    embed = [":topological"],
+    deps = [
+        "//graphs/model",
+        "@com_github_stretchr_testify//assert",
+    ],
+)
