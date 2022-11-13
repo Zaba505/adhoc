@@ -1,8 +1,8 @@
 exports_files([
-  "deploy.sh",
+    "deploy.sh",
 ])
 
 sh_binary(
-  name = "deploy",
-  srcs = [":deploy.sh"],
+    name = "deploy",
+    srcs = [":deploy.sh"],
 )
