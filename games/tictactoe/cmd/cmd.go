@@ -53,8 +53,10 @@ func ExecuteContext(pctx context.Context, args ...string) error {
 	}
 
 	cmd := buildCli(
-		withServeCmd(
-			withServeGrpcCmd(),
+		withPlayCmd(
+			withPlayPvPCmd(),
+			withPlayPvCCmd(),
+			withPlayCvCCmd(),
 		),
 	)
 	cmd.SetArgs(args)

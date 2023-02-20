@@ -1,0 +1,17 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "tictactoe",
+    srcs = [
+        "game.go",
+        "player.go",
+    ],
+    importpath = "github.com/Zaba505/adhoc/games/tictactoe/tictactoe",
+    visibility = ["//visibility:public"],
+    deps = [
+        "@com_github_cloudevents_sdk_go_v2//event",
+        "@com_github_google_uuid//:uuid",
+        "@com_github_zaba505_ibento//:ibento",
+        "@org_uber_go_zap//:zap",
+    ],
+)
