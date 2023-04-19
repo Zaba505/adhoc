@@ -1,0 +1,11 @@
+[package]
+name = "svc-maze"
+version = "0.0.0"
+edition = "2021"
+
+[[bin]]
+name = "svc-maze"
+path = "main.rs"
+
+[dependencies]
+maze = { path = "../lib/maze" }

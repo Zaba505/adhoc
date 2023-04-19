@@ -1,0 +1,10 @@
+[workspace]
+members = [
+    "lib/maze",
+    "./svc-maze",
+]
+
+[workspace.dependencies]
+bitflags = "2.1.0"
+rand = "0.8.5"
+futures = "0.3.28"

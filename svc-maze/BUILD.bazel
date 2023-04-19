@@ -1,0 +1,16 @@
+# Copyright (c) 2023 Zaba505
+# 
+# This software is released under the MIT License.
+# https://opensource.org/licenses/MIT
+
+load("@rules_rust//rust:defs.bzl", "rust_binary")
+
+rust_binary(
+    name = "svc-maze",
+    srcs = [
+        "main.rs",
+    ],
+    deps = [
+        "//lib/maze",
+    ],
+)
